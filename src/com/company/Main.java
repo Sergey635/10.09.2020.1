@@ -54,7 +54,7 @@ public class Main {
                 )
         );
         System.out.println(list2.get(1));
-        
+
 
     }
 }
