@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -54,7 +55,20 @@ public class Main {
                 )
         );
         System.out.println(list2.get(1));
+        list.stream().filter(item -> item.getArea()>15).forEach(System.out::println);
 
+        List<String> words = new ArrayList<>();
+        words.add("Hello");
+        words.add("World");
+        words.add("Java");
+        words.add("Red");
+        words.add("Monkey");
+        words.add("Step");
+        words.add("Acadeny");
+
+        List<String> shortList = words.stream().filter(item -> item.length()>4).collect(Collectors.toList());
+        //"(item -> item.length()>4)" - називається лямда-виражение
+        System.out.println(shortList);
 
     }
 }
